@@ -20,6 +20,11 @@ final class Routes: RouteCollection {
         builder.get("info") { req in
             return req.description
         }
-        
+      
+      builder.get("/_ah/health") { req in
+        print("ALL - /_ah/health route handler...")
+        return "OK"
+      }
+      
     }
 }
